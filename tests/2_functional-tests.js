@@ -40,7 +40,7 @@ suite('Functional Tests', function() {
         .end(function(err, res){
           assert.equal(res.status, 200);
            console.log(res.body);
-          assert.equal(res.body.message, 'invalid unit');
+          assert.equal(res.body, 'invalid unit');
           done();
         });
        
@@ -65,7 +65,7 @@ suite('Functional Tests', function() {
         .get('/api/convert')
         .query({input: '3/7.2/4kilomegagram'})
         .end(function(err, res){
-          assert.equal(res.body.message, 'invalid unit');
+          assert.equal(res.body, 'invalid unit');
           done();
         });
         

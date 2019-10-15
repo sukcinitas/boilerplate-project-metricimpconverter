@@ -36,13 +36,13 @@ module.exports = function(app) {
     );
 
     if (initNum == "invalid number" && initUnit === "invalid unit") {
-      res.json({ message: "invalid number and invalid unit" });
+      res.json("invalid number and invalid unit");
       return;
     } else if (initNum == "invalid number") {
-      res.json({ message: "invalid number" });
+      res.json("invalid number");
       return;
     } else if (initUnit == "invalid unit") {
-      res.json({ message: "invalid unit" });
+      res.json("invalid unit");
       return;
     } else {
       res.json({
